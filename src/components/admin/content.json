@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_admin_contents",
+  "info": {
+    "displayName": "Content",
+    "icon": "file"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "heroTitle": {
+      "type": "string"
+    },
+    "heroSubtitle": {
+      "type": "string"
+    }
+  }
+}

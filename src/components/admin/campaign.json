@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_admin_campaigns",
+  "info": {
+    "displayName": "Campaign",
+    "icon": "bullhorn"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "area": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "goalAmount": {
+      "type": "decimal"
+    },
+    "raisedAmount": {
+      "type": "decimal",
+      "default": 0
+    },
+    "image": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Active",
+        "Draft"
+      ],
+      "default": "Active"
+    }
+  }
+}

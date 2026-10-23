@@ -1,0 +1,51 @@
+{
+  "kind": "singleType",
+  "collectionName": "admins",
+  "info": {
+    "singularName": "admin",
+    "pluralName": "admins",
+    "displayName": "Admin Workspace",
+    "description": "Swachetna Admin Workspace for products, categories, campaigns, content and settings"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "products": {
+      "type": "component",
+      "repeatable": true,
+      "component": "admin.product"
+    },
+    "categories": {
+      "type": "component",
+      "repeatable": true,
+      "component": "admin.category"
+    },
+    "campaigns": {
+      "type": "component",
+      "repeatable": true,
+      "component": "admin.campaign"
+    },
+    "content": {
+      "type": "component",
+      "repeatable": false,
+      "component": "admin.content"
+    },
+    "settings": {
+      "type": "component",
+      "repeatable": false,
+      "component": "admin.settings"
+    },
+    "orders": {
+      "type": "component",
+      "repeatable": true,
+      "component": "admin.order"
+    },
+    "inquiries": {
+      "type": "component",
+      "repeatable": true,
+      "component": "admin.inquiry"
+    }
+  }
+}

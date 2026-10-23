@@ -1,0 +1,47 @@
+{
+  "collectionName": "components_admin_orders",
+  "info": {
+    "displayName": "Order",
+    "icon": "shopping-bag"
+  },
+  "options": {},
+  "attributes": {
+    "orderId": {
+      "type": "string",
+      "required": true
+    },
+    "customer": {
+      "type": "string",
+      "required": true
+    },
+    "customerEmail": {
+      "type": "email"
+    },
+    "customerPhone": {
+      "type": "string"
+    },
+    "total": {
+      "type": "decimal",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Pending",
+        "Processing",
+        "Shipped",
+        "Delivered"
+      ],
+      "default": "Pending"
+    },
+    "paymentMethod": {
+      "type": "string"
+    },
+    "items": {
+      "type": "json"
+    },
+    "orderDate": {
+      "type": "datetime"
+    }
+  }
+}

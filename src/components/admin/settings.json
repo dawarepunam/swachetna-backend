@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_admin_settings",
+  "info": {
+    "displayName": "Settings",
+    "icon": "cog"
+  },
+  "options": {},
+  "attributes": {
+    "organization": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    },
+    "address": {
+      "type": "text"
+    }
+  }
+}
