@@ -458,6 +458,7 @@ export interface ApiAdminAdmin extends Struct.SingleTypeSchema {
     campaigns: Schema.Attribute.Component<'admin.campaign', true>;
     categories: Schema.Attribute.Component<'admin.category', true>;
     content: Schema.Attribute.Component<'admin.content', false>;
+    coupons: Schema.Attribute.Component<'admin.coupon', true>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

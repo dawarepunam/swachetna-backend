@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_admin_coupons",
+  "info": {
+    "displayName": "Coupon",
+    "description": "Promo codes and discounts for Swachetna Foundation store"
+  },
+  "options": {},
+  "attributes": {
+    "code": {
+      "type": "string",
+      "required": true
+    },
+    "discountType": {
+      "type": "enumeration",
+      "enum": [
+        "percentage",
+        "fixed"
+      ],
+      "default": "percentage"
+    },
+    "discountValue": {
+      "type": "decimal",
+      "required": true
+    },
+    "minOrderAmount": {
+      "type": "decimal",
+      "default": 0
+    },
+    "maxDiscount": {
+      "type": "decimal"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Active",
+        "Inactive"
+      ],
+      "default": "Active"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}
+

@@ -20,6 +20,9 @@
     "customerPhone": {
       "type": "string"
     },
+    "customerAddress": {
+      "type": "text"
+    },
     "total": {
       "type": "decimal",
       "required": true

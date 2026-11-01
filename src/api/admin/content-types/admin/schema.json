@@ -46,6 +46,11 @@
       "type": "component",
       "repeatable": true,
       "component": "admin.inquiry"
+    },
+    "coupons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "admin.coupon"
     }
   }
 }

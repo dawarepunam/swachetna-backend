@@ -46,6 +46,25 @@ export interface AdminContent extends Struct.ComponentSchema {
   };
 }
 
+export interface AdminCoupon extends Struct.ComponentSchema {
+  collectionName: 'components_admin_coupons';
+  info: {
+    description: 'Promo codes and discounts for Swachetna Foundation store';
+    displayName: 'Coupon';
+  };
+  attributes: {
+    code: Schema.Attribute.String & Schema.Attribute.Required;
+    description: Schema.Attribute.String;
+    discountType: Schema.Attribute.Enumeration<['percentage', 'fixed']> &
+      Schema.Attribute.DefaultTo<'percentage'>;
+    discountValue: Schema.Attribute.Decimal & Schema.Attribute.Required;
+    maxDiscount: Schema.Attribute.Decimal;
+    minOrderAmount: Schema.Attribute.Decimal & Schema.Attribute.DefaultTo<0>;
+    status: Schema.Attribute.Enumeration<['Active', 'Inactive']> &
+      Schema.Attribute.DefaultTo<'Active'>;
+  };
+}
+
 export interface AdminInquiry extends Struct.ComponentSchema {
   collectionName: 'components_admin_inquiries';
   info: {
@@ -73,6 +92,7 @@ export interface AdminOrder extends Struct.ComponentSchema {
   };
   attributes: {
     customer: Schema.Attribute.String & Schema.Attribute.Required;
+    customerAddress: Schema.Attribute.Text;
     customerEmail: Schema.Attribute.Email;
     customerPhone: Schema.Attribute.String;
     items: Schema.Attribute.JSON;
@@ -95,17 +115,22 @@ export interface AdminProduct extends Struct.ComponentSchema {
   };
   attributes: {
     category: Schema.Attribute.String;
+    colors: Schema.Attribute.String;
     description: Schema.Attribute.Text;
-    image: Schema.Attribute.String;
+    image: Schema.Attribute.Text;
+    images: Schema.Attribute.Text;
     name: Schema.Attribute.String & Schema.Attribute.Required;
     originalPrice: Schema.Attribute.Decimal;
     price: Schema.Attribute.Decimal & Schema.Attribute.Required;
+    reviews: Schema.Attribute.JSON;
+    sizes: Schema.Attribute.String;
     sku: Schema.Attribute.String;
     slug: Schema.Attribute.String & Schema.Attribute.Required;
     status: Schema.Attribute.Enumeration<['Published', 'Draft']> &
       Schema.Attribute.DefaultTo<'Published'>;
     stock: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
     subcategory: Schema.Attribute.String;
+    variants: Schema.Attribute.JSON;
   };
 }
 
@@ -130,6 +155,7 @@ declare module '@strapi/strapi' {
       'admin.campaign': AdminCampaign;
       'admin.category': AdminCategory;
       'admin.content': AdminContent;
+      'admin.coupon': AdminCoupon;
       'admin.inquiry': AdminInquiry;
       'admin.order': AdminOrder;
       'admin.product': AdminProduct;

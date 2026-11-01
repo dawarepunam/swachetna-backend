@@ -46,7 +46,22 @@
       "default": "Published"
     },
     "image": {
+      "type": "text"
+    },
+    "images": {
+      "type": "text"
+    },
+    "colors": {
       "type": "string"
+    },
+    "sizes": {
+      "type": "string"
+    },
+    "variants": {
+      "type": "json"
+    },
+    "reviews": {
+      "type": "json"
     }
   }
 }
